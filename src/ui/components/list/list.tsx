@@ -23,16 +23,16 @@ export default function List(props: ListProps){
         <ListStyled>
             {props.pets.map(pet => (
                 <ListItem key={pet.id}>
-                    <Image src={pet.image} alt={pet.name}/>
+                    <Image src={pet.foto} alt={pet.foto}/>
                     <InfoBlock>
-                        <Name>{pet.name}</Name>
-                        <History>{TextService.textRestriction(pet.history, textMaxSize)}</History>
+                        <Name>{pet.nome}</Name>
+                        <History>{TextService.textRestriction(pet.historia, textMaxSize)}</History>
                         <Button 
                             variant={'contained'}
                             fullWidth
                             onClick={() => props.onSelect(pet)}
                         >
-                            Adotar {pet.name}
+                            Adotar {pet.nome}
                         </Button>
                     </InfoBlock>
                 </ListItem>

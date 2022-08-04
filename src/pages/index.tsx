@@ -15,7 +15,8 @@ const Home: NextPage = () => {
     valor,
     setValor,
     mensagem,
-    setMensagem
+    setMensagem,
+    adotar
   } = useIndex();
   return (
     <div>
@@ -67,6 +68,7 @@ const Home: NextPage = () => {
           </Button>
           <Button
             variant={'contained'}
+            onClick={() => adotar()}
           >
             Confirmar adoção
           </Button>
